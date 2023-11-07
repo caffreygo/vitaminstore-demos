@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscription preferences</title>
+    <script type="text/javascript" src="./src/index.js"></script>
+    <link rel="stylesheet" href="./src/index.css" />
+  </head>
+  <body>
+    <section class="consent-banner">
+      <div class="consent-banner__image">
+        <picture
+          ><source
+            type="image/avif"
+            media="(min-width: 768px)"
+            srcset="
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=440,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1900w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1600,h=440,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1600w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1300,h=440,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1300w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1023,h=320,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1023w
+            " />
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            srcset="
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=767,h=767,f=avif,fit=cover/nop-content-live/images/consent/mobile.jpg 767w
+            " />
+          <source
+            type="image/jpeg"
+            media="(min-width: 768px)"
+            srcset="
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=440,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1900w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1600,h=440,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1600w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1300,h=440,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1300w,
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=1023,h=320,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1023w
+            " />
+          <source
+            type="image/jpeg"
+            media="(max-width: 767px)"
+            srcset="
+              https://assets.vitaminstore.nl/cdn-cgi/image/w=767,h=767,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/mobile.jpg 767w
+            " />
+          <img
+            src="https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=440,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg"
+            alt="Vitaminstore"
+            loading="eager"
+        /></picture>
+      </div>
+      <div class="consent-banner__info">
+        <h1>Omarm de winter</h1>
+        <p>Geef je gezondheid een boost</p>
+        <button
+          class="Base-button Base-button--primary hero-banner__button"
+          type="button"
+        >
+          <!----><span class="Base-button__content"
+            ><!--[-->Shop nu<!--]--></span
+          >
+        </button>
+      </div>
+    </section>
+    <!-- <div class="content">
+      <h1>Subscription preferences</h1>
+
+      <div class="success">Settings saved!</div>
+
+      <div class="email-block">
+        <div class="email-block-title">
+          Email Subscriptions for <strong id="email">sample@example.com</strong>
+        </div>
+        <div class="email-block-subtitle">
+          Here you can change your email sending preferences.
+        </div>
+      </div>
+      <h2>We are sorry to see you go.</h2>
+      <p>
+        It seems that you don't like getting e-mails from us. You can
+        unsubscribe now or give us a second chance. Please select the categories
+        you wish to receive newsletters from.
+      </p>
+      <form method="POST" action="" id="form">
+        <div class="checkboxes">
+          <hr />
+          <label>
+            <input
+              type="checkbox"
+              value="grant"
+              checked
+              id="category_newsletter"
+              name="category_newsletter"
+            />
+            <span class="checkbox-title">Nieuwsbrief</span>
+          </label>
+
+          <hr />
+          <label>
+            <input
+              type="checkbox"
+              value="grant"
+              id="category_promotional-email"
+              name="category_promotional-email"
+            />
+            <span class="checkbox-title">Actiemails</span>
+          </label>
+
+          <hr />
+          <label>
+            <input
+              type="checkbox"
+              value="grant"
+              id="category_physical-magazine"
+              name="category_physical-magazine"
+            />
+            <span class="checkbox-title">Magazine per post </span>
+          </label>
+        </div>
+        <hr />
+        <button type="button" onclick="changeSubscription()">
+          Change subscriptions
+        </button>
+        <button type="button" onclick="unsubscribeAll()">
+          Unsubscribe from all
+        </button>
+      </form>
+    </div> -->
+  </body>
+</html>
