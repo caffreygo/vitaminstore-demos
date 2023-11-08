@@ -1,66 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl-NL">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitaminstore | Email voorkeuren</title>
-    <link rel="icon" type="image/x-icon" href="https://www.vitaminstore.nl/favicons/favicon.ico">
-    <script type="text/javascript" src="./src/index.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/5b4c14b0-7e02-11ee-9693-06c940cfe8ca"
+    />
     <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
     <section class="consent-banner">
       <div class="consent-banner__image">
-        <picture
-          ><source
-            type="image/avif"
-            media="(min-width: 768px)"
-            srcset="
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=500,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1900w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1600,h=420,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1600w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1300,h=340,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1300w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1023,h=268,f=avif,fit=cover/nop-content-live/images/consent/desktop.jpg 1023w
-            " />
+        <picture>
           <source
-            type="image/avif"
             media="(max-width: 767px)"
             srcset="
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=767,h=767,f=avif,fit=cover/nop-content-live/images/consent/mobile.jpg 767w
-            " />
-          <source
-            type="image/jpeg"
-            media="(min-width: 768px)"
-            srcset="
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=500,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1900w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1600,h=420,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1600w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1300,h=340,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1300w,
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=1023,h=268,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg 1023w
-            " />
-          <source
-            type="image/jpeg"
-            media="(max-width: 767px)"
-            srcset="
-              https://assets.vitaminstore.nl/cdn-cgi/image/w=767,h=767,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/mobile.jpg 767w
-            " />
+              https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/7286d5f8-7e01-11ee-b680-da632011cca7
+            "
+          />
           <img
-            src="https://assets.vitaminstore.nl/cdn-cgi/image/w=1920,h=500,f=jpeg,fit=cover,q=95/nop-content-live/images/consent/desktop.jpg"
+            src="https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/743d9364-7e01-11ee-ac8c-da632011cca7"
             alt="Vitaminstore"
             loading="eager"
-        /></picture>
+          />
+        </picture>
       </div>
       <div class="consent-banner__info">
         <img
-          src="https://assets.vitaminstore.nl/cdn-cgi/image/w=292,h=128/nop-content-live/images/consent/logo.png"
-          alt="vitaminstore"
+          src="https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/732b2ffe-7e01-11ee-98d3-ea57334afdf5"
+          alt="Vitaminstore Logo"
           loading="eager"
         />
       </div>
     </section>
     <section class="consent-content">
       <h1>Email voorkeuren</h1>
+      <div class="consent-alert is-success">
+        <span class="consent-alert__label"> Settings saved! </span>
+      </div>
+      <div id="errorAlert" class="consent-alert is-error">
+        <span class="consent-alert__label" id="errorAlertContent">
+          Error Occurred!
+        </span>
+      </div>
       <p>
         Email en magazine inschrijvingen voor:
-        <strong>leon@vitaminstore.nl</strong>
+        <strong id="email">leon@vitaminstore.nl</strong>
       </p>
       <p>
         Op deze pagina kunjeje aan- en afmelden voor onze nieuwsbrieven en/of
@@ -73,24 +61,36 @@
       </p>
       <p>Selecteer de categorieèn die je graag ontvangt.</p>
 
-      <form id="subscription-form" method="post" action="">
+      <form id="form" method="post" action="">
         <label>
           <input type="checkbox" name="newsletter" />
           <span class="checkmark"></span>
-          Nieuwsbrief
+          <span>
+            Nieuwsbrief
+            <p class="description">Nieuwsbrief</p>
+          </span>
         </label>
         <label>
-          <input type="checkbox" name="promotionalEmail" />
+          <input type="checkbox" name="promotional-email" />
           <span class="checkmark"></span>
-          Actiemails met persoonlijke aanbiedingen
+          <span>
+            Actiemails met persoonlijke aanbiedingen
+            <p class="description">Actiemails met persoonlijke aanbiedingen</p>
+          </span>
         </label>
         <label>
-          <input type="checkbox" name="physicalMagazine" />
+          <input type="checkbox" name="physical-magazine" />
           <span class="checkmark"></span>
-          Vitaminstore magazine per post
+          <span>
+            Vitaminstore magazine per post
+            <p class="description">Vitaminstore magazine per post</p>
+          </span>
         </label>
-        <button type="button" id="submit-button">Wijzig je inschrijving</button>
+        <button type="button" onclick="changeSubscription()">
+          Wijzig je inschrijving
+        </button>
       </form>
     </section>
+    <script type="text/javascript" src="./src/index.js"></script>
   </body>
 </html>

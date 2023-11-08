@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Subscription preferences</title>
+        <script type="application/javascript">{{ script }}</script>
+        <style type="text/css">{{ style }}</style>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Subscription preferences</h1>
+            {% if is_submitted %}
+		        <div class="success">Settings saved!</div>
+		    {% endif %}
+            <div class="email-block">
+                <div class="email-block-title">Email Subscriptions for <strong id="email">{{ email | escape }}</strong></div>
+                <div class="email-block-subtitle">Here you can change your email sending preferences.</div>
+            </div>
+            <h2>We are sorry to see you go.</h2>
+            <p>
+                It seems that you don't like getting e-mails from us.
+                You can unsubscribe now or give us a second chance.
+                Please select the categories you wish to receive newsletters from.
+            </p>
+            <form method="POST" action="" id="form">
+                <div class="checkboxes">
+                	{% for category in categories %}
+			            <hr>
+	                    <label>
+	                        <input type="checkbox" value="grant" {% if category.valid %}checked{% endif %}
+                                   id="category_{{ category.id | escape }}"
+                                   name="category {{ category.id | escape }}">
+	                        <span class="checkbox-title">{{ category.name | escape }}</span>
+	                        {% if category.description %}
+	                        	<span class="checkbox-subtitle">{{ category.description | escape }}</span>
+	                        {% endif %}
+	                    </label>
+			        {% endfor %}
+                </div>
+                <hr>
+                <button type="button" onclick="changeSubscription()">Change subscriptions</button>
+                <button type="button" onclick="unsubscribeAll()">Unsubscribe from all</button>
+            </form>
+        </div>
+    </body>
+</html>

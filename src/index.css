@@ -1,9 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
+
+/* https://app.eu1.exponea.com/p/vitaminstore-dev/data/assets/files/folder/2d10ef98-7dfe-11ee-84f8-22b0744f3e73 */
+@font-face {
+  font-display: swap;
+  font-family: "canela";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/1551bf0c-7e00-11ee-a2f3-523ae167680a)
+      format("woff2"),
+    url(https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/14d75578-7e00-11ee-b83f-523ae167680a)
+      format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "canela";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/164dd4f4-7e00-11ee-a6c5-523ae167680a)
+      format("woff2"),
+    url(https://storage.googleapis.com/eu1-app-storage/5be59e96-6dc7-11ee-9215-564bf3f146bd/media/original/15d51b7c-7e00-11ee-92ab-523ae167680a)
+      format("woff");
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "barlow", blinkmacsystemfont, -apple-system, "Segoe UI", roboto,
+    helvetica, arial, sans-serif;
 }
 
 body {
@@ -11,17 +37,22 @@ body {
   color: #2a4b5a;
 }
 
-h1 {
+h1,
+h2 {
+  line-height: 1.3;
   color: #123444;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  font-family: "canela", verdana, helvetica, arial, sans-serif;
+}
+
+h1 {
   font-size: 24px;
-  line-height: 1;
   margin: 32px 0;
 }
 
 h2 {
-  color: #123444;
   font-size: 20px;
-  line-height: 1;
   margin: 28px 0;
 }
 
@@ -72,6 +103,31 @@ p {
   height: auto;
 }
 
+.consent-alert {
+  border-left: 5px solid #7d939d;
+  background: #eaedee;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin: -10px 0 20px;
+}
+
+.consent-alert#errorAlert {
+  display: none;
+}
+
+.consent-alert.is-success {
+  color: #3b7a14;
+  border-left: 5px solid #3b7a14;
+  background: #cadeb5;
+}
+
+.consent-alert.is-error {
+  color: #ad2a01;
+  border-left: 5px solid #ad2a01;
+  background: #f7b6a2;
+}
+
 .consent-content {
   margin: 0 auto;
   padding: 0 10px 40px;
@@ -86,9 +142,14 @@ p {
 
 .consent-content label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   user-select: none;
   cursor: pointer;
+}
+
+.consent-content label .description {
+  font-size: 14px;
+  font-style: italic;
 }
 
 .consent-content input[type="checkbox"] {
@@ -144,6 +205,10 @@ p {
 
   h2 {
     font-size: 24px;
+  }
+
+  .consent-alert {
+    padding: 10px 20px;
   }
 
   .consent-banner {
