@@ -55,3 +55,23 @@ async function submitToVitaminstore() {
     //alert('encounter network issue  please try again later');
   }
 }
+
+// // 获取表单和提交按钮
+// const form = document.getElementById("subscription-form");
+// const submitButton = document.getElementById("submit-button");
+
+// // 添加点击事件监听器
+// submitButton.addEventListener("click", function () {
+//     // 获取选中的复选框的值
+//     const formData = {
+//         newsletter: form.querySelector('input[name="newsletter"]').checked,
+//         promotionalEmail: form.querySelector('input[name="promotionalEmail"]').checked,
+//         physicalMagazine: form.querySelector('input[name="physicalMagazine"]').checked,
+//     };
+
+//     // 这里可以添加额外的逻辑，如将数据发送到服务器
+//     console.log(formData);
+
+//     // 如果要提交表单，可以使用以下代码：
+//     // form.submit();
+// });
