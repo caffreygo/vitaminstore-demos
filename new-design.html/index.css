@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap");
+
+.br-dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 920px;
+  display: flex;
+  background-color: #fcf9f3;
+  transform: translate(-50%, -50%);
+}
+
+.br-dialog__image {
+  width: 45%;
+  overflow: hidden;
+}
+
+.br-dialog__image img {
+  width: 100%;
+}
+
+.br-dialog__main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.br-dialog__content {
+  color: #123444;
+  font-family: "Barlow",BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  width: 320px;
+  display: flex;
+  gap: 12px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.br-dialog__content > h1 {
+  font-weight: normal;
+  font-size: 56px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.br-dialog__content > h2 {
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.br-dialog__content > p {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.br-dialog__content a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #e4753d;
+}
+
+.br-dialog__content a:hover {
+  color: #d1591d;
+}
+
+.br-dialog__content button {
+  margin-top: 20px;
+  border: none;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 500;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 24px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  background: #2a4b5a;
+  min-height: 50px;
+  padding: 0 28px;
+  color: #ffffff;
+}
+
+.br-dialog__content button:hover {
+  background-color: #123444;
+}
+
+.br-dialog__form-input {
+  margin-bottom: 12px;
+}
+
+.br-dialog__form-input input {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #7B8D93;
+  box-shadow: none;
+  padding: 12px;
+  line-height: 1;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #2a4b5a;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+
+.br-dialog__form-checkbox {
+  color: #2a4b5a;
+  text-align: left;
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+  cursor: pointer;
+}
+
+.br-dialog__form-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.br-dialog__form-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 26px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid #2a4b5a;
+  background-color: #fff;
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+}
+
+.br-dialog__form-checkmark::before {
+  display: none;
+  content: "✔";
+}
+
+.br-dialog__form-checkbox input[type="checkbox"]:checked + .br-dialog__form-checkmark::before {
+  display: block;
+}
+
+.br-dialog__close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  padding: 6px 10px;
+  right: 8px;
+}
+
+.br-dialog__close-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.br-dialog__close-text {
+  margin-top: 6px;
+  cursor: pointer;
+  color: #274553;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width:1200px) {
+  .br-dialog {
+    width: 680px;
+  }
+
+  .br-dialog__content {
+    width: 265px;
+  }
+
+  .br-dialog__content > h1 {
+    font-size: 36px;
+  }
+
+  .br-dialog__content > h2 {
+    font-size: 24px;
+  }
+
+  .br-dialog__content > p {
+    font-size: 18px;
+  }
+
+  .br-dialog__form-input input {
+    height: 40px;
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .br-dialog__content button {
+    font-size: 20px;
+    min-height: 44px;
+  }
+
+  .br-dialog__form-checkbox {
+    font-size: 14px;
+  }
+
+  .br-dialog__form-checkbox input[type="checkbox"] + .br-dialog__form-checkmark {
+    width: 26px;
+    height: 16px;
+  }
+
+  .br-dialog__close-icon {
+    top: 4px;
+    padding: 4px;
+    right: 4px;
+  }
+
+  .br-dialog__close-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .br-dialog__close-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .br-dialog {
+    width: auto;
+    padding: 20px 20px;
+  }
+
+  .br-dialog__content {
+    width: 265px;
+  }
+
+  .br-dialog__image {
+    display: none;
+  }
+}

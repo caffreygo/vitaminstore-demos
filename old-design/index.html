@@ -1,0 +1,15 @@
+<div class="exponea-banner exponea-subscription-dialog">
+  <span class="exponea-header">[[ {name: 'headerText', category: 'Texts', orderIndex: '10000', isJsonParam: true} : string ]]</span>
+  <span class="exponea-text">[[ {name: 'bodyText', category: 'Texts', orderIndex: '10001', isJsonParam: true} : string ]]</span>
+  <form class="exponea-form">
+      <input name="email" type="text" class="exponea-input" placeholder="[[ {name: 'placeholder', category: 'Texts', orderIndex: '10003', isJsonParam: true} : string ]]" pattern="^\S+@\S+\.\S+$" 
+      required oninvalid="this.setCustomValidity('[[ {name: 'invalidEmailMessage', category: 'Texts', orderIndex: '10005', isJsonParam: true} : string ]]')" 
+      oninput="setCustomValidity('')">
+      <input type="submit" class="exponea-button" value="[[ {name: 'buttonTitle', category: 'Texts', orderIndex: '10006', isJsonParam: true} : string ]]" />
+  </form>
+  <span class="exponea-close"><span class="exponea-close-cross"></span></span>
+  
+  <object class="exponea-branding">You can opt-out at any time, more details in 
+      <a class="policy" href="[[ {name: 'privacyPolicyLink', category: 'Links', orderIndex: '10007', isJsonParam: true} : string | https://exponea.com/privacy-policy?utm_campaign=exponea-web-layer&utm_medium=banner&utm_source=referral ]]" target="_blank">Privacy policy</a>
+  </object>
+</div>

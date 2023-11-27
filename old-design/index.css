@@ -1,0 +1,146 @@
+.exponea-subscription-dialog {
+  display: block;
+  position: fixed;
+  max-width: 370px;
+  bottom: 15px;
+  right: -400px;
+  transition: all 1.5s;
+  z-index: 9999999;
+  background: [[ {name: 'backgroundColor', category: 'Colors', orderIndex: '10000', isJsonParam: true} : color ]];
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: normal;
+  text-decoration: inherit;
+  cursor: default;
+  padding: 35px;
+}
+
+.exponea-subscription-dialog, .exponea-subscription-dialog * {
+  box-sizing: border-box;
+}
+
+.exponea-subscription-dialog.exponea-animate {
+right: 10px;
+}
+
+.exponea-subscription-dialog:hover,
+.exponea-subscription-dialog:active {
+  text-decoration: inherit;
+}
+
+.exponea-subscription-dialog span {
+  display: block;
+}
+
+.exponea-subscription-dialog .exponea-header {
+  font-size: 26px;
+  font-weight: 600;
+  color: [[ {name: 'headerColor', category: 'Colors', orderIndex: '10001', isJsonParam: true} : color ]];
+  padding: 15px;
+}
+
+.exponea-subscription-dialog .exponea-text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.7em;
+  color: [[ {name: 'bodyTextColor', category: 'Colors', orderIndex: '10002', isJsonParam: true} : color ]];
+  margin-bottom: 32px
+}
+
+.exponea-subscription-dialog .exponea-input {
+  display: inline-block;
+  font-size: 14px;
+  color: [[ {name: 'inputTextColor', category: 'Colors', orderIndex: '10003', isJsonParam: true} : color ]];
+  background: #ffffff;
+  border: none;
+  text-align: left;
+  padding: 12px;
+  float: left;
+  width: 70%;
+  height: 40px;
+}
+
+.exponea-subscription-dialog .exponea-button {
+  display: inline-block;
+  font-size: 14px;
+  color: [[ {name: 'buttonTextColor', category: 'Colors', orderIndex: '10004', isJsonParam: true} : color ]];
+  background: [[ {name: 'buttonBackgroundColor', category: 'Colors', orderIndex: '10005', isJsonParam: true} : color ]];
+  border: none;
+  cursor: pointer;
+  float: left;
+  width: 30%;
+  height: 40px;
+  text-align: center;
+}
+
+.exponea-subscription-dialog .exponea-close {
+  padding: 15px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.exponea-subscription-dialog .exponea-close .exponea-close-cross {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  top: 8px;
+  right: 8px;
+}
+
+.exponea-subscription-dialog .exponea-close:hover {
+  cursor: pointer;
+}
+
+.exponea-subscription-dialog .exponea-close .exponea-close-cross:before,
+.exponea-subscription-dialog .exponea-close .exponea-close-cross:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: [[ {name: 'closeButtonColor', category: 'Colors', orderIndex: '10006', isJsonParam: true} : color ]];
+  height: 1px;
+}
+
+.exponea-subscription-dialog .exponea-close .exponea-close-cross:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.exponea-subscription-dialog .exponea-close .exponea-close-cross:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 400px) {
+  .exponea-subscription-dialog {
+      width: 100%;
+      max-width: none;
+      bottom: 0;
+      padding: 20px;
+  }
+  .exponea-subscription-dialog.exponea-animate {
+      right: 0;
+  }
+}
+
+.exponea-branding {
+font-size: 11px;
+  position: relative;
+  right: 10px;
+  top: 15px;
+  padding-top: 10px;
+  color: [[ {name: 'bodyTextColor', category: 'Colors', orderIndex: '10007', isJsonParam: true} : color ]];
+}
+
+.exponea-branding a {
+font-weight:bold;
+  color: [[ {name: 'policyButton', category: 'Colors', orderIndex: '10008', isJsonParam: true} : color ]];
+  text-decoration: none;
+}
+
